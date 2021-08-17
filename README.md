@@ -7,7 +7,7 @@
 ## 👨‍🏭👷👷👩‍🏭👨‍🏭👨‍🏭👨‍🏭👷👨‍🏭👷👨‍🏭👨‍🏭👨‍🏭👷👩‍🏭👨‍🏭👷👨‍🏭👷👷👨‍🏭👨‍🏭👩‍🏭👨‍🏭👩‍🏭👨‍🏭👨‍🏭👩‍🏭👩‍🏭👩‍🏭👨‍🏭👨‍🏭👷👷👷👨‍🏭👨‍🏭👷👩‍🏭👩‍🏭👩‍🏭👩‍🏭👨‍🏭👷👷👨‍🏭👷👩‍🏭👩‍🏭👷
 ## 👷👨‍🏭👩‍🏭👷👷👩‍🏭👩‍🏭👨‍🏭👨‍🏭👩‍🏭👩‍🏭👷👷👩‍🏭👷👷👨‍🏭👨‍🏭👨‍🏭👩‍🏭👷👷👩‍🏭👨‍🏭👷👨‍🏭👨‍🏭👩‍🏭👨‍🏭👩‍🏭👷👨‍🏭👨‍🏭👩‍🏭👨‍🏭👷👨‍🏭👩‍🏭👩‍🏭👨‍🏭👩‍🏭👩‍🏭👨‍🏭👩‍🏭👩‍🏭👩‍🏭👷👷👨‍🏭👨‍🏭
 
-This is an attempt to make a CLI version of @hillel on twitter's Art Machine, as found here https://colab.research.google.com/drive/1n_xrgKDlGQcCF6O-eL3NOd_x4NSqAUjK - which itself is based on another notebook by Katherine Crowson.
+This is an attempt to make a CLI version of @hillelogram on twitter's Art Machine, as found here https://colab.research.google.com/drive/1n_xrgKDlGQcCF6O-eL3NOd_x4NSqAUjK - which itself is based on another notebook by Katherine Crowson.
 
 Anyway, what I'm saying is I didn't build this. I'm attempting to package the thing other people built into a CLI tool.
 
