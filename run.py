@@ -66,7 +66,7 @@ seed = 1 #@param {type:"integer"}
 # TODO why is this even argparse this makes no sense!
 import argparse
 parser = argparse.ArgumentParser()
-parser.add_argument('--text-prompt', type=str)
+parser.add_argument('--text-prompt', type=str, required=True)
 parser.add_argument('--image-prompt', type=str, default='')
 parser.add_argument('--total-iterations', type=int, default=400)
 parser.add_argument('--image-size', type=int, default=400)
