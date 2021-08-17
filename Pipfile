@@ -1,0 +1,28 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+argparse = "*"
+pathlib = "*"
+ipython = "*"
+omegaconf = "*"
+requests = "*"
+torch = "*"
+torchvision = "*"
+tqdm = "*"
+kornia = "*"
+ftfy = "*"
+regex = "*"
+pytorch-lightning = "*"
+imageio-ffmpeg = "*"
+einops = "*"
+transformers = "*"
+taming-transformers = "*"
+clip = {git = "https://github.com/openai/CLIP.git"}
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
