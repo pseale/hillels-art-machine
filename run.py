@@ -24,7 +24,6 @@
 #@markdown ### Basic options:
 #@markdown ↓ The prompt to you want to try.
 
-p = "Chariot of Fire" #@param {type:"string"}
 
 #@markdown ↓ How big you want the image to be. This can be up to 700, but if it's smaller, your images will appear *much* faster.
 image_size =   400#@param {type:"integer"}
@@ -343,7 +342,7 @@ pMs = []
 from re import sub
 
 # I hate using underscores for names, but this way is better for people using utf-8
-p_filename = sub("\W", "", p.lower().replace(" ","_"))
+p_filename = sub("\W", "", args.text_prompt.lower().replace(" ","_"))
 
 ### make the output path for dumping the images 
 img_path = Path("img") / "grouped" / p_filename
@@ -375,7 +374,7 @@ def synth(one_hot):
 
 @torch.no_grad()
 def checkin(i, losses):
-    tqdm.write(f'iterations: {i}, prompt: {p}')
+    tqdm.write(f'iterations: {i}, prompt: {args.text_prompt}')
     one_hot = F.one_hot(logits.argmax(1), n_toks).to(logits.dtype)
     out = synth(one_hot)
     out_img = TF.to_pil_image(out[0].cpu())
