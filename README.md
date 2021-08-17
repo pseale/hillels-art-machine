@@ -29,6 +29,6 @@ curl -C - -o vqgan_imagenet_f16_1024.yaml -L 'http://mirror.io.community/blob/vq
 curl -C - -o vqgan_imagenet_f16_1024.ckpt -L 'http://mirror.io.community/blob/vqgan/vqgan_imagenet_f16_1024.ckpt'
 
 # finally run the tool with default parameters
-# TODO: everything �
+# TODO: everything 👍
 python3 run.py
 ```
