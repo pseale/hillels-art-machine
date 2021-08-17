@@ -26,7 +26,6 @@
 
 
 #@markdown ↓ How big you want the image to be. This can be up to 700, but if it's smaller, your images will appear *much* faster.
-image_size =   400#@param {type:"integer"}
 
 #@markdown ↓ If checked, will automatically bundle and download the images when the engine is done.
 
@@ -70,6 +69,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--text-prompt', type=str)
 parser.add_argument('--image-prompt', type=str, default='')
 parser.add_argument('--total-iterations', type=int, default=400)
+parser.add_argument('--image-size', type=int, default=400)
 
 
 
@@ -325,7 +325,7 @@ flavordict = {
 }
 make_cutouts = flavordict[flavor](cut_size, args.cutn, cut_pow=args.cut_pow)
 n_toks = model.quantize.n_e
-toksX, toksY = image_size // f, image_size // f
+toksX, toksY = args.image_size // f, args.image_size // f
 sideX, sideY = toksX * f, toksY * f
 
 if args.seed is not None:
