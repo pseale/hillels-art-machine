@@ -30,5 +30,8 @@ curl -C - -o vqgan_imagenet_f16_1024.ckpt -L 'http://mirror.io.community/blob/vq
 
 # finally run the tool with default parameters
 # TODO: everything 👍
-python3 run.py
+pipenv run ./ham --text-prompt "tree bark flavored ice cream" # choose better words
+
+# or, provide an optional image prompt
+pipenv run ./ham --text-prompt "swirling clouds and a glorious sunrise" --image-prompt 'https://pbs.twimg.com/media/E8DTA6MXEAIHVE_?format=jpg&name=4096x4096'
 ```

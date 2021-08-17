@@ -67,23 +67,27 @@ seed = 1 #@param {type:"integer"}
 
 # TODO why is this even argparse this makes no sense!
 import argparse
-args = argparse.Namespace(
-    prompts=[p],
-    image_prompts=[],
-    noise_prompt_seeds=[],
-    noise_prompt_weights=[],
-    tv_weight=0.1,
-    step_size=0.05*(weirdness if weirdness != 11 else 22),
-    weight_decay=0.,
-    cutn=64,
-    cut_pow=1.,
-    display_freq=steps_per_image,
-    total_iterations=total_steps,
-    seed=seed,
-)
+parser = argparse.ArgumentParser()
+parser.add_argument('--text-prompt', type=str)
+parser.add_argument('--image-prompt', type=str, default='')
+parser.add_argument('--total-iterations', type=int, default=400)
 
-if style_url:
-  args.image_prompts = [style_url]
+
+
+args = parser.parse_args()
+args.prompts = [args.text_prompt]
+args.image_prompts = [args.image_prompt] if args.image_prompt != '' else []
+args.noise_prompt_seeds=[]
+args.noise_prompt_weights=[]
+args.tv_weight=0.1
+args.step_size=0.05*(weirdness if weirdness != 11 else 22)
+args.weight_decay=0.
+args.cutn=64
+args.cut_pow=1.
+args.display_freq=steps_per_image
+#args.total_iterations=total_steps
+args.seed=seed
+
 
 #@title More, different setup { display-mode: "form" }
 import math
@@ -92,7 +96,7 @@ from pathlib import Path
 import sys
 import time
 
-from IPython import display
+# from IPython import display
 from omegaconf import OmegaConf
 from PIL import Image
 import requests
